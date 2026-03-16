@@ -139,3 +139,4 @@ export function buildCalendarGrid(loggedDays, moodMap) {
 }
 
 export { CONTRACT_ID }
+
