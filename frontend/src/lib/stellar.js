@@ -2,8 +2,8 @@ import * as StellarSdk from '@stellar/stellar-sdk'
 import { isConnected, requestAccess, getAddress, signTransaction } from '@stellar/freighter-api'
 
 const CONTRACT_ID = (import.meta.env.VITE_CONTRACT_ID || '').trim()
-const NET         = import.meta.env.VITE_NETWORK_PASSPHRASE || 'Test SDF Network ; September 2015'
-const RPC_URL     = import.meta.env.VITE_SOROBAN_RPC_URL    || 'https://soroban-testnet.stellar.org'
+const NET         = (import.meta.env.VITE_NETWORK_PASSPHRASE || 'Test SDF Network ; September 2015').trim()
+const RPC_URL     = (import.meta.env.VITE_SOROBAN_RPC_URL    || 'https://soroban-testnet.stellar.org').trim()
 const DUMMY       = 'GAAZI4TCR3TY5OJHCTJC2A4QSY6CJWJH5IAJTGKIN2ER7LBNVKOCCWN'
 
 export const rpc = new StellarSdk.rpc.Server(RPC_URL)
