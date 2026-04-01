@@ -55,6 +55,13 @@ const tc = () => new StellarSdk.Contract(CONTRACT_ID)
 
 // ── log_mood ───────────────────────────────────────────────────────────────
 export async function logMood(author, mood, note, day) {
+  if (mood < 1 || mood > 5) throw new Error('Mood must be between 1 and 5.')
+  const existing = await readContract(tc().call(
+    'get_entry',
+    StellarSdk.Address.fromString(author).toScVal(),
+    StellarSdk.xdr.ScVal.scvU32(day),
+  ))
+  if (existing) throw new Error('Mood already logged for this day.')
   return sendTx(author, tc().call(
     'log_mood',
     StellarSdk.Address.fromString(author).toScVal(),
