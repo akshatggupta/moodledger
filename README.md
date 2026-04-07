@@ -8,7 +8,7 @@ An immutable daily mood journal built on the Stellar blockchain. Log how you're 
 |---|---|
 | **Frontend** | `https://moodledger.vercel.app` |
 | **GitHub** | `https://github.com/YOUR_USERNAME/moodledger` |
-| **Contract** | `https://stellar.expert/explorer/testnet/contract/CONTRACT_ID` |
+| **Contract** | `https://stellar.expert/explorer/testnet/contract/CBKHVA7BMSSHBMUVDUBRWJZNXCRHKZ2G5D3WSKNMTQCO5OBFYAZWITB5` |
 | **Proof TX** | `https://stellar.expert/explorer/testnet/tx/TX_HASH` |
 
 ## How It Works
