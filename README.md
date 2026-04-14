@@ -7,7 +7,7 @@ An immutable daily mood journal built on the Stellar blockchain. Log how you're 
 | | |
 |---|---|
 | **Frontend** | `https://moodledger.vercel.app` |
-| **Contract** | `https://stellar.expert/explorer/testnet/contract/CBKHVA7BMSSHBMUVDUBRWJZNXCRHKZ2G5D3WSKNMTQCO5OBFYAZWITB5` |
+| **Contract** | `https://stellar.expert/explorer/testnet/contract/CAQLEC6KQZQQRLSTC6MS7G2NYDS2JR4BLIJDFGWHXJWNGHQ7ECGMF3L3` |
 
 ## How It Works
 
@@ -17,6 +17,16 @@ An immutable daily mood journal built on the Stellar blockchain. Log how you're 
 - Entries loaded in batches of 30 to minimise RPC calls
 - No tokens, no fees — just a storage transaction
 
+## Why This Project Matters
+
+This project turns a familiar real-world workflow into a verifiable on-chain primitive on Stellar: transparent state transitions, user-authenticated actions, and deterministic outcomes.
+
+## Architecture
+
+- **Smart Contract Layer**: Soroban contract enforces business rules, authorization, and state transitions.
+- **Client Layer**: React + Vite frontend handles wallet UX, transaction composition, and real-time status views.
+- **Wallet/Auth Layer**: Freighter signs every state-changing action so operations are attributable and non-repudiable.
+- **Infra Layer**: Stellar Testnet + Soroban RPC for execution; Vercel for frontend hosting.
 ## Contract Functions
 
 ```rust
@@ -45,3 +55,6 @@ total_entries() -> u32
 chmod +x scripts/deploy.sh && ./scripts/deploy.sh
 cd frontend && npm install && npm run dev
 ```
+
+
+
